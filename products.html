@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background: #1a1a1a;
+            color: white;
+            margin: 0;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+        .product-card p {
+            color: #444;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Our Products</h1>
+
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Fast performance, perfect for work.</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <p>AMOLED display, amazing camera quality.</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>Crystal clear sound with deep bass.</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Shoes">
+        <h3>Running Shoes</h3>
+        <p>Comfortable, stylish & durable.</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80" alt="Watch">
+        <h3>Smart Watch</h3>
+        <p>Track fitness, steps, heart rate.</p>
+        <button>Add to Cart</button>
+    </div>
+
+</div>
+
+</body>
+</html>

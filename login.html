@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Login — ShopEase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">ShopEase</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a class="active" href="login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label>Email <input id="loginEmail" type="email" required></label>
+      <label>Password <input id="loginPass" type="password" required minlength="6"></label>
+      <div class="flex">
+        <button class="btn-primary" type="submit">Login</button>
+        <button type="button" class="btn-ghost" onclick="location.href='register.html'">Register</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 ShopEase</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

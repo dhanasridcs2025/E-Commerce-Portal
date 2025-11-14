@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — ShopEase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">ShopEase</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Customer Care</h2>
+    <form id="supportForm">
+      <label>Your name <input id="supName" type="text" required></label>
+      <label>Your email <input id="supEmail" type="email" required></label>
+      <label>Message <textarea id="supMsg" required></textarea></label>
+      <div class="flex">
+        <button class="btn-primary" type="submit">Send Ticket</button>
+        <button class="btn-ghost" type="button" onclick="renderSupportList()">View Tickets</button>
+      </div>
+    </form>
+    <div id="supportList" style="margin-top:20px"></div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 ShopEase</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

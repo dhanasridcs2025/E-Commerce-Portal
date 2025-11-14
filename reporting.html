@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report an Issue</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f6f6f6;
+}
+h1 {
+    background: #1a1a1a;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+.report-container {
+    max-width: 700px;
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+select, input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+textarea {
+    height: 120px;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background: #0056b3;
+}
+.success-box {
+    display: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Report an Issue</h1>
+
+<div class="report-container">
+    <label>Issue Type</label>
+    <select id="issueType">
+        <option value="">-- Select Issue --</option>
+        <option>Late Delivery</option>
+        <option>Damaged Product</option>
+        <option>Payment Failure</option>
+        <option>Wrong Item Delivered</option>
+        <option>Quality Issue</option>
+        <option>Return/Refund Issue</option>
+        <option>Other</option>
+    </select>
+
+    <label>Your Email</label>
+    <input type="email" id="email">
+
+    <label>Description</label>
+    <textarea id="description"></textarea>
+
+    <label>Upload Screenshot (Optional)</label>
+    <input type="file" id="fileUpload">
+
+    <button onclick="submitReport()">Submit Report</button>
+
+    <div class="success-box" id="successBox">
+        Report submitted successfully! Our team will contact you shortly.
+    </div>
+</div>
+
+<script>
+function submitReport() {
+    let type = document.getElementById("issueType").value;
+    let email = document.getElementById("email").value;
+    if (type === "" || email === "") {
+        alert("Please fill all required fields!");
+        return;
+    }
+    document.getElementById("successBox").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("successBox").style.display = "none";
+    }, 4000);
+}
+</script>
+
+</body>
+</html>
